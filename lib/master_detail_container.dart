@@ -68,20 +68,22 @@ class _ItemMasterDetailContainerState extends State<MasterDetailContainer> {
       appBar: new AppBar(
         title: new Text('Master-detail flow sample'),
       ),
-      body: new LayoutBuilder(
-        builder: (context, constraints) {
-          final double smallestDimension = min(
-            constraints.maxWidth,
-            constraints.maxHeight,
-          );
+       body: new Center(
+          child: new FutureBuilder<List<Item>>(
+            future: fetchItem(),
+            builder: (context, snapshot) {
+              if (snapshot.hasData) {
+                items = snapshot.data;
+                return _buildMobileLayout();
+              } else if (snapshot.hasError) {
+                return new Text("${snapshot.error}");
+              }
 
-          if (smallestDimension < kTabletBreakpoint) {
-            return _buildMobileLayout();
-          }
-
-          return _buildTabletLayout();
-        },
-      ),
+              // By default, show a loading spinner
+              return new CircularProgressIndicator();
+            },
+          ),
+       ),
     );
   }
 }

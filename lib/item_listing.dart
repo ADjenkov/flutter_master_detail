@@ -14,10 +14,14 @@ class ItemListing extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
     return new ListView(
-      children: items.map((item) {
+      children:
+
+      
+       items.map((item) {
         return new ListTile(
-          title: new Text(item.title),
+          title: new Text(item.name),
           onTap: () => itemSelectedCallback(item),
           selected: selectedItem == item,
         );
