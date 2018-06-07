@@ -17,8 +17,6 @@ class ItemListing extends StatelessWidget {
     
     return new ListView(
       children:
-
-      
        items.map((item) {
         return new ListTile(
           title: new Text(item.name),

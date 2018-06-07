@@ -59,14 +59,18 @@ class Item {
 }
 
 Future<List<Item>> fetchItem() async {
-final List<Item> tempItems = <Item>[
-];
+
+  if(items.length>0) {
+    return items;
+  }
+
+  final List<Item> tempItems = <Item>[
+  ];
 
   final response =
-     // await http.get('https://jsonplaceholder.typicode.com/posts');
-     await http.get('https://gist.githubusercontent.com/ADjenkov/d524f9736341f4ca3354ccfaacb72477/raw/e51659f0c95e84a2d5a65354aeffa318e496eb39/cars-son');
+    // await http.get('https://jsonplaceholder.typicode.com/posts');
+    await http.get('https://gist.githubusercontent.com/ADjenkov/d524f9736341f4ca3354ccfaacb72477/raw/e51659f0c95e84a2d5a65354aeffa318e496eb39/cars-son');
   final responseJson = json.decode(response.body);
-
 
   for (Map<String, dynamic> car in responseJson["cars"]) {
       tempItems.add(new Item.fromJson(car));

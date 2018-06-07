@@ -18,11 +18,11 @@ class ItemDetails extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         new Text(
-          item?.name ?? 'No item selected!',
+          item.name ?? 'No item selected!',
           style: textTheme.headline,
         ),
         new Text(
-          item.luggage ?? 'Please select one on the left.',
+          item.seats ?? 'Please select one on the left.',
           style: textTheme.subhead,
         ),
       ],
