@@ -14,16 +14,15 @@ class ItemListing extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
     return new ListView(
-      children:
-       items.map((item) {
-         return new Container(
-           padding: const EdgeInsets.only(left: 12.0, right: 12.0, top: 12.0),
-           child: new Row(
-             children: <Widget>[
-               new Expanded(
-                 child: new Column(
+      children: items.map((item) {
+        return new GestureDetector(
+          onTap: () => itemSelectedCallback(item),
+          child: new Container(
+            padding: const EdgeInsets.only(left: 12.0, right: 12.0, top: 12.0),
+            child: new Row(children: <Widget>[
+              new Expanded(
+                child: new Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     new Container(
@@ -39,11 +38,11 @@ class ItemListing extends StatelessWidget {
                     ),
                   ],
                 ),
-                ),
-                new Text('€' + item.price.toString() + '/day'),
-              ]
-             ),
-         );
+              ),
+              new Text('€' + item.price.toString() + '/day'),
+            ]),
+          ),
+        );
         // return new ListTile(
         //   title: new Text(item.name),
         //   onTap: () => itemSelectedCallback(item),

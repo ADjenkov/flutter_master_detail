@@ -3,19 +3,6 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
-
-
-// "class" : "Luxury",
-//         "doors" : 2,
-//         "hasAC" : true,
-//         "id" : "car1",
-//         "imageStoragePath" : "images/car1.jpg",
-//         "imageUrl" : "https://raw.githubusercontent.com/bugventure/template-master-detail-ng/master/data/images/car1.jpg",
-//         "luggage" : 3,
-//         "name" : "BMW 5 Series",
-//         "price" : 76,
-//         "seats" : "2",
-//         "transmission" : "Automatic"
 class Item {
   Item({
     @required this.doors,
@@ -28,7 +15,6 @@ class Item {
     @required this.price,
     @required this.seats,
     @required this.transmission
-
   });
 
     final int doors;
@@ -64,11 +50,9 @@ Future<List<Item>> fetchItem() async {
     return items;
   }
 
-  final List<Item> tempItems = <Item>[
-  ];
+  final List<Item> tempItems = <Item>[];
 
   final response =
-    // await http.get('https://jsonplaceholder.typicode.com/posts');
     await http.get('https://gist.githubusercontent.com/ADjenkov/d524f9736341f4ca3354ccfaacb72477/raw/e51659f0c95e84a2d5a65354aeffa318e496eb39/cars-son');
   final responseJson = json.decode(response.body);
 
@@ -79,5 +63,4 @@ Future<List<Item>> fetchItem() async {
   return tempItems;
 }
 
- List<Item> items = <Item>[
-];
+ List<Item> items = <Item>[];
