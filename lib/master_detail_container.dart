@@ -66,7 +66,7 @@ class _ItemMasterDetailContainerState extends State<MasterDetailContainer> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('Master-detail flow sample'),
+        title: new Text('Browse'),
       ),
        body: new Center(
           child: new FutureBuilder<List<Item>>(
