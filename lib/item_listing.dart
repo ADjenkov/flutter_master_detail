@@ -45,11 +45,11 @@ class ItemListing extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             new Container(
-              padding: const EdgeInsets.only(bottom: 8.0, top: 8.0),
+              padding: const EdgeInsets.only(bottom: 6.0, top: 6.0),
               child: new Text(
                 item.name,
                 style: new TextStyle(
-                  fontSize: 17.0,
+                  fontSize: 16.0,
                   fontWeight: FontWeight.bold,
                   color: Color.fromARGB(255, 58, 83, 255),
                   //color: Colors.amber,
@@ -65,12 +65,12 @@ class ItemListing extends StatelessWidget {
 
   Row _buildDetailsRaw(item) {
     return new Row(children: <Widget>[
-      new Image.network(item.imageUrl, width: 200.0),
-      new Container(height: 100.0, child: _buildIconColumn()),
+      new Image.network(item.imageUrl, width: 170.0),
+      new Container(height: 100.0,padding: new EdgeInsets.only(left: 30.0), child: _buildIconColumn()),
       new Container(
           height: 100.0,
           child: new Padding(
-            padding: new EdgeInsets.only(left: 20.0),
+            padding: new EdgeInsets.only(left: 10.0),
             child: _buildInfoColumn(item),
           ))
     ]);
@@ -83,11 +83,11 @@ class ItemListing extends StatelessWidget {
       mainAxisSize: MainAxisSize.max,
       children: <Widget>[
         new Icon(FontAwesomeIcons.car,
-            size: 20.0, color: Color.fromARGB(255, 58, 83, 255)),
+            size: 15.0, color: Color.fromARGB(255, 58, 83, 255)),
         new Icon(FontAwesomeIcons.gears,
-            size: 20.0, color: Color.fromARGB(255, 58, 83, 255)),
+            size: 15.0, color: Color.fromARGB(255, 58, 83, 255)),
         new Icon(FontAwesomeIcons.snowflakeO,
-            size: 20.0, color: Color.fromARGB(255, 58, 83, 255))
+            size: 15.0, color: Color.fromARGB(255, 58, 83, 255))
       ],
     );
   }

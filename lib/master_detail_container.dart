@@ -66,24 +66,29 @@ class _ItemMasterDetailContainerState extends State<MasterDetailContainer> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('Browse'),
+        backgroundColor: Color.fromARGB(255, 58, 83, 255),
+        centerTitle: true,
+        title: new Text(
+          'Browse',
+          textAlign: TextAlign.center,
+        ),
       ),
-       body: new Center(
-          child: new FutureBuilder<List<Item>>(
-            future: fetchItem(),
-            builder: (context, snapshot) {
-              if (snapshot.hasData) {
-                items = snapshot.data;
-                return _buildMobileLayout();
-              } else if (snapshot.hasError) {
-                return new Text("${snapshot.error}");
-              }
+      body: new Center(
+        child: new FutureBuilder<List<Item>>(
+          future: fetchItem(),
+          builder: (context, snapshot) {
+            if (snapshot.hasData) {
+              items = snapshot.data;
+              return _buildMobileLayout();
+            } else if (snapshot.hasError) {
+              return new Text("${snapshot.error}");
+            }
 
-              // By default, show a loading spinner
-              return new CircularProgressIndicator();
-            },
-          ),
-       ),
+            // By default, show a loading spinner
+            return new CircularProgressIndicator();
+          },
+        ),
+      ),
     );
   }
 }

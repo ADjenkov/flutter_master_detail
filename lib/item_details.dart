@@ -158,6 +158,8 @@ class ItemDetails extends StatelessWidget {
 
     return new Scaffold(
       appBar: new AppBar(
+        backgroundColor: Color.fromARGB(255, 58, 83, 255),
+        centerTitle: true,
         title: new Text(item.name),
       ),
       body: content,
