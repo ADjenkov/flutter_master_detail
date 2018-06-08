@@ -20,7 +20,7 @@ class ItemDetails extends StatelessWidget {
           new Expanded(
               child: new SingleChildScrollView(
                   child: new Container(
-                      decoration: new BoxDecoration(color: Colors.red),
+                      decoration: new BoxDecoration(color: Colors.white),
                       child: new Column(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [

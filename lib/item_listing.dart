@@ -20,15 +20,14 @@ class ItemListing extends StatelessWidget {
         return new GestureDetector(
           onTap: () => itemSelectedCallback(item),
           child: new Container(
-            color: Colors.white,
-            padding: const EdgeInsets.only(left: 12.0, right: 12.0),
-            margin: const EdgeInsets.only(top: 12.0),
-            child: Column(children: [
-              _buildPriceRow(item),
-              new Divider(height: 1.00,color: Colors.black12),
-              _buildDetailsRaw(item)
-            ])
-          ),
+              color: Colors.white,
+              padding: const EdgeInsets.only(left: 12.0, right: 12.0),
+              margin: const EdgeInsets.only(top: 12.0),
+              child: Column(children: [
+                _buildPriceRow(item),
+                new Divider(height: 1.00, color: Colors.black12),
+                _buildDetailsRaw(item)
+              ])),
         );
         // return new ListTile(
         //   title: new Text(item.name),
@@ -41,45 +40,40 @@ class ItemListing extends StatelessWidget {
 
   Row _buildPriceRow(item) {
     return new Row(children: <Widget>[
-              new Expanded(
-                child: new Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    new Container(
-                      padding: const EdgeInsets.only(bottom: 8.0),
-                      child: new Text(
-                        item.name,
-                        style: new TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Color.fromARGB(255, 58, 83, 255),
-                          //color: Colors.amber,
-                        ),
-                      ),
-                    ),
-                  ],
+      new Expanded(
+        child: new Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            new Container(
+              padding: const EdgeInsets.only(bottom: 8.0, top: 8.0),
+              child: new Text(
+                item.name,
+                style: new TextStyle(
+                  fontSize: 17.0,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 58, 83, 255),
+                  //color: Colors.amber,
                 ),
               ),
-              new Text('€' + item.price.toString() + '/day'),
-            ]);
+            ),
+          ],
+        ),
+      ),
+      new Text('€' + item.price.toString() + '/day'),
+    ]);
   }
 
   Row _buildDetailsRaw(item) {
     return new Row(children: <Widget>[
-              new Image.network(
-                item.imageUrl,
-                width: 200.0
-              ),
-               new Container(
-                height: 100.0,
-                child: _buildIconColumn()),
-              new Container(
-                height: 100.0,
-                child: new Padding(
-                  padding: new EdgeInsets.only(left: 20.0),
-                  child: _buildInfoColumn(item),
-                )
-              )
-            ]);
+      new Image.network(item.imageUrl, width: 200.0),
+      new Container(height: 100.0, child: _buildIconColumn()),
+      new Container(
+          height: 100.0,
+          child: new Padding(
+            padding: new EdgeInsets.only(left: 20.0),
+            child: _buildInfoColumn(item),
+          ))
+    ]);
   }
 
   Column _buildIconColumn() {
@@ -88,9 +82,12 @@ class ItemListing extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       mainAxisSize: MainAxisSize.max,
       children: <Widget>[
-        new Icon(FontAwesomeIcons.car, size: 20.0, color: Colors.lightBlue,),
-        new Icon(FontAwesomeIcons.gears, size: 20.0, color: Colors.lightBlue),
-        new Icon(FontAwesomeIcons.snowflakeO, size: 20.0, color: Colors.lightBlue)
+        new Icon(FontAwesomeIcons.car,
+            size: 20.0, color: Color.fromARGB(255, 58, 83, 255)),
+        new Icon(FontAwesomeIcons.gears,
+            size: 20.0, color: Color.fromARGB(255, 58, 83, 255)),
+        new Icon(FontAwesomeIcons.snowflakeO,
+            size: 20.0, color: Color.fromARGB(255, 58, 83, 255))
       ],
     );
   }
