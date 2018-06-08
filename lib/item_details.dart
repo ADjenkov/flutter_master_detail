@@ -22,7 +22,7 @@ class ItemDetails extends StatelessWidget {
         new Container(height: 200.0,child: 
           new Image.network(item.imageUrl, fit: BoxFit.fitWidth)),
          ),
-          new Divider(),
+          new Divider( color: Colors.black26,),
           new Column(
             children: [
               new Row(
