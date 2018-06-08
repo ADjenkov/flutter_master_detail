@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
       title: 'Master-Detail example',
       theme: new ThemeData(
         primarySwatch: Colors.blue,
+        backgroundColor: Colors.black12
       ),
       home: new MasterDetailContainer(),
     );
