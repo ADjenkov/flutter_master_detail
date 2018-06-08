@@ -88,7 +88,7 @@ class ItemDetails extends StatelessWidget {
                               margin:
                                   new EdgeInsets.only(top: 5.0, bottom: 5.0),
                               child: new Text(
-                                item.price.toString(),
+                                '€' + item.price.toString() + '/day',
                                 style: textTheme.subhead,
                               )),
                           new Container(
