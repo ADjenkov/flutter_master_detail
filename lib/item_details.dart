@@ -53,47 +53,47 @@ class ItemDetails extends StatelessWidget {
                                                     textAlign: TextAlign.left,
                                                     style: new TextStyle(
                                                         color: Colors.grey,
-                                                        fontSize: 16.0))),
+                                                        fontSize: 14.0))),
                                             new Container(
                                                 margin: new EdgeInsets.only(
                                                     top: 5.0, bottom: 5.0),
                                                 child: new Text("Class",
                                                     style: new TextStyle(
                                                         color: Colors.grey,
-                                                        fontSize: 16.0))),
+                                                        fontSize: 14.0))),
                                             new Container(
                                                 margin: new EdgeInsets.only(
                                                     top: 5.0, bottom: 5.0),
                                                 child: new Text("Doors",
                                                     style: new TextStyle(
                                                         color: Colors.grey,
-                                                        fontSize: 16.0))),
+                                                        fontSize: 14.0))),
                                             new Container(
                                                 margin: new EdgeInsets.only(
                                                     top: 5.0, bottom: 5.0),
                                                 child: new Text("Seats",
                                                     style: new TextStyle(
                                                         color: Colors.grey,
-                                                        fontSize: 16.0))),
+                                                        fontSize: 14.0))),
                                             new Container(
                                                 margin: new EdgeInsets.only(
                                                     top: 5.0, bottom: 5.0),
                                                 child: new Text("Transmission",
                                                     style: new TextStyle(
                                                         color: Colors.grey,
-                                                        fontSize: 16.0))),
+                                                        fontSize: 14.0))),
                                             new Container(
                                                 margin: new EdgeInsets.only(
                                                     top: 5.0, bottom: 5.0),
                                                 child: new Text("Luggage",
                                                     style: new TextStyle(
                                                         color: Colors.grey,
-                                                        fontSize: 16.0))),
+                                                        fontSize: 14.0))),
                                           ],
                                         )),
                                     new Padding(
                                         padding:
-                                            new EdgeInsets.only(left: 50.0),
+                                            new EdgeInsets.only(left: 20.0),
                                         child: new Column(
                                           crossAxisAlignment:
                                               CrossAxisAlignment.start,
@@ -106,42 +106,42 @@ class ItemDetails extends StatelessWidget {
                                                   '€' +
                                                       item.price.toString() +
                                                       '/day',
-                                                  style: textTheme.subhead,
+                                                  style: new TextStyle(                                                         fontSize: 14.0),
                                                 )),
                                             new Container(
                                                 margin: new EdgeInsets.only(
                                                     top: 5.0, bottom: 5.0),
                                                 child: new Text(
                                                   item.classType.toString(),
-                                                  style: textTheme.subhead,
+                                                  style: new TextStyle(                                                         fontSize: 14.0),
                                                 )),
                                             new Container(
                                                 margin: new EdgeInsets.only(
                                                     top: 5.0, bottom: 5.0),
                                                 child: new Text(
                                                   item.doors.toString(),
-                                                  style: textTheme.subhead,
+                                                  style: new TextStyle(                                                         fontSize: 14.0),
                                                 )),
                                             new Container(
                                                 margin: new EdgeInsets.only(
                                                     top: 5.0, bottom: 5.0),
                                                 child: new Text(
                                                   item.seats,
-                                                  style: textTheme.subhead,
+                                                  style: new TextStyle(                                                         fontSize: 14.0),
                                                 )),
                                             new Container(
                                                 margin: new EdgeInsets.only(
                                                     top: 5.0, bottom: 5.0),
                                                 child: new Text(
                                                   item.transmission,
-                                                  style: textTheme.subhead,
+                                                  style: new TextStyle(                                                         fontSize: 14.0),
                                                 )),
                                             new Container(
                                                 margin: new EdgeInsets.only(
                                                     top: 5.0, bottom: 5.0),
                                                 child: new Text(
                                                   item.luggage.toString(),
-                                                  style: textTheme.subhead,
+                                                  style: new TextStyle(                                                         fontSize: 14.0),
                                                 ))
                                           ],
                                         ))
